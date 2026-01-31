@@ -6,8 +6,23 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Include directories
-include_directories(
+# Dependencies
+# (Reserved for FTXUI later)
+
+# Sources
+file(GLOB_RECURSE SOURCES 
+    "src/domain/*.cpp"
+    "src/app/*.cpp"
+    "src/infra/*.cpp"
+    "src/ui/*.cpp"
+    "src/main.cpp"
+)
+
+# Executable
+add_executable(libtrack-cpp ${SOURCES})
+
+# Include directories (Modern Target-based)
+target_include_directories(libtrack-cpp PRIVATE
     include
     include/domain
     include/app
@@ -15,15 +30,10 @@ include_directories(
     include/ui
 )
 
-# Source files
-file(GLOB_RECURSE SOURCES "src/*.cpp")
-
-# Executable
-add_executable(libtrack-cpp ${SOURCES})
-
-# Compile options (Warnings)
+# Compiler warnings/options
 if(MSVC)
-    target_compile_options(libtrack-cpp PRIVATE /W4)
+    target_compile_options(libtrack-cpp PRIVATE /W4 /permissive- /Zc:__cplusplus)
 else()
-    target_compile_options(libtrack-cpp PRIVATE -Wall -Wextra -Wpedantic)
+    target_compile_options(libtrack-cpp PRIVATE -Wall -Wextra -Wpedantic -Wconversion)
 endif()
+

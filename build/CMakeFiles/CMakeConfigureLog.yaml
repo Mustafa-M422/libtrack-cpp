@@ -251,8 +251,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-0ir050"
-      binary: "C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-0ir050"
+      source: "C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-h4b6bt"
+      binary: "C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-h4b6bt"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: ""
@@ -262,16 +262,16 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-0ir050'
+        Change Dir: 'C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-h4b6bt'
         
-        Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_46319/fast
-        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_46319.dir\\build.make CMakeFiles/cmTC_46319.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-0ir050'
-        Building CXX object CMakeFiles/cmTC_46319.dir/CMakeCXXCompilerABI.cpp.obj
-        C:\\mingw64\\bin\\g++.exe    -o CMakeFiles\\cmTC_46319.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\mingw64\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp
-        mingw32-make[1]: *** [CMakeFiles\\cmTC_46319.dir\\build.make:80: CMakeFiles/cmTC_46319.dir/CMakeCXXCompilerABI.cpp.obj] Error 1
-        mingw32-make[1]: Leaving directory 'C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-0ir050'
-        mingw32-make: *** [Makefile:133: cmTC_46319/fast] Error 2
+        Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_69530/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_69530.dir\\build.make CMakeFiles/cmTC_69530.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-h4b6bt'
+        Building CXX object CMakeFiles/cmTC_69530.dir/CMakeCXXCompilerABI.cpp.obj
+        C:\\mingw64\\bin\\g++.exe    -o CMakeFiles\\cmTC_69530.dir\\CMakeCXXCompilerABI.cpp.obj -c C:\\mingw64\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_69530.dir\\build.make:80: CMakeFiles/cmTC_69530.dir/CMakeCXXCompilerABI.cpp.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-h4b6bt'
+        mingw32-make: *** [Makefile:133: cmTC_69530/fast] Error 2
         
       exitCode: 2
   -
@@ -282,8 +282,8 @@ events:
     checks:
       - "Check for working CXX compiler: C:/mingw64/bin/g++.exe"
     directories:
-      source: "C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-zlzirz"
-      binary: "C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-zlzirz"
+      source: "C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-o034zl"
+      binary: "C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-o034zl"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: ""
@@ -293,16 +293,16 @@ events:
       variable: "CMAKE_CXX_COMPILER_WORKS"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-zlzirz'
+        Change Dir: 'C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-o034zl'
         
-        Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_2b5cb/fast
-        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_2b5cb.dir\\build.make CMakeFiles/cmTC_2b5cb.dir/build
-        mingw32-make[1]: Entering directory 'C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-zlzirz'
-        Building CXX object CMakeFiles/cmTC_2b5cb.dir/testCXXCompiler.cxx.obj
-        C:\\mingw64\\bin\\g++.exe    -o CMakeFiles\\cmTC_2b5cb.dir\\testCXXCompiler.cxx.obj -c C:\\Users\\mosta\\Desktop\\libtrack-cpp-main\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zlzirz\\testCXXCompiler.cxx
-        mingw32-make[1]: *** [CMakeFiles\\cmTC_2b5cb.dir\\build.make:80: CMakeFiles/cmTC_2b5cb.dir/testCXXCompiler.cxx.obj] Error 1
-        mingw32-make[1]: Leaving directory 'C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-zlzirz'
-        mingw32-make: *** [Makefile:133: cmTC_2b5cb/fast] Error 2
+        Run Build Command(s): C:/mingw64/bin/cmake.exe -E env VERBOSE=1 C:/mingw64/bin/mingw32-make.exe -f Makefile cmTC_5f3b9/fast
+        C:/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_5f3b9.dir\\build.make CMakeFiles/cmTC_5f3b9.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-o034zl'
+        Building CXX object CMakeFiles/cmTC_5f3b9.dir/testCXXCompiler.cxx.obj
+        C:\\mingw64\\bin\\g++.exe    -o CMakeFiles\\cmTC_5f3b9.dir\\testCXXCompiler.cxx.obj -c C:\\Users\\mosta\\Desktop\\libtrack-cpp-main\\build\\CMakeFiles\\CMakeScratch\\TryCompile-o034zl\\testCXXCompiler.cxx
+        mingw32-make[1]: *** [CMakeFiles\\cmTC_5f3b9.dir\\build.make:80: CMakeFiles/cmTC_5f3b9.dir/testCXXCompiler.cxx.obj] Error 1
+        mingw32-make[1]: Leaving directory 'C:/Users/mosta/Desktop/libtrack-cpp-main/build/CMakeFiles/CMakeScratch/TryCompile-o034zl'
+        mingw32-make: *** [Makefile:133: cmTC_5f3b9/fast] Error 2
         
       exitCode: 2
 ...
