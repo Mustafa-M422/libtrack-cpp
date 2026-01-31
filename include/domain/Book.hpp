@@ -1,17 +1,19 @@
-#ifndef BOOK_HPP
-#define BOOK_HPP
+#pragma once
 
 #include <string>
+#include <iostream>
 
 namespace domain {
-struct Book {
-    std::string isbn;
-    std::string title;
-    std::string author;
-    int publicationYear;
-    int totalCopies;
-    int availableCopies;
-};
-}
 
-#endif // BOOK_HPP
+    struct Book {
+        int id;
+        std::string title;
+        std::string author;
+        bool isBorrowed;
+
+        Book() : id(0), isBorrowed(false) {}
+        Book(int id, std::string t, std::string a) 
+            : id(id), title(std::move(t)), author(std::move(a)), isBorrowed(false) {}
+    };
+
+}
