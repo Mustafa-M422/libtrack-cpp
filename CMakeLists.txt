@@ -63,3 +63,25 @@ if(MSVC)
 else()
     target_compile_options(libtrack_cli PRIVATE -Wall -Wextra -Wpedantic)
 endif()
+
+# --- GUI Executable (Commit 12) ---
+set(GUI_SOURCES
+    src/gui/GuiApp.cpp
+    src/gui/MainFrame.cpp
+)
+
+# WIN32 flag tells CMake to build as a Windows GUI app (not console)
+add_executable(libtrack_gui WIN32 ${GUI_SOURCES})
+
+# Link wxWidgets and Core
+target_link_libraries(libtrack_gui PRIVATE 
+    libtrack_core 
+    wx::core 
+    wx::base
+)
+
+if(MSVC)
+    target_compile_options(libtrack_gui PRIVATE /W4)
+else()
+    target_compile_options(libtrack_gui PRIVATE -Wall -Wextra -Wpedantic)
+endif()
