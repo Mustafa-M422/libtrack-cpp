@@ -1,41 +1,45 @@
 #pragma once
 
 #include "domain/Book.hpp"
-#include "domain/Member.hpp"
 #include "domain/Loan.hpp"
-#include <vector>
-#include <string>
+#include "domain/Member.hpp"
+#include "infra/IRepository.hpp"
 #include <optional>
+#include <string>
+#include <vector>
+
 
 namespace app {
 
-    class LibraryService {
-    private:
-        // In-memory storage for now (will be replaced by Repository later)
-        std::vector<domain::Book> books;
-        std::vector<domain::Member> members;
-        std::vector<domain::Loan> loans;
+class LibraryService {
+private:
+  infra::IRepository &repo;
 
-        // Helpers
-        domain::Book* findBookById(int id);
-        domain::Member* findMemberById(int id);
-        domain::Loan* findActiveLoanForBook(int bookId);
+  // In-memory storage (synced with simple repo)
+  std::vector<domain::Book> books;
+  std::vector<domain::Member> members;
+  std::vector<domain::Loan> loans;
 
-    public:
-        LibraryService() = default;
+  // Helpers
+  domain::Book *findBookById(int id);
+  domain::Member *findMemberById(int id);
+  domain::Loan *findActiveLoanForBook(int bookId);
 
-        // Book Management
-        void addBook(const domain::Book& book);
-        std::vector<domain::Book> searchBooks(const std::string& query) const;
-        std::vector<domain::Book> getAllBooks() const;
+public:
+  explicit LibraryService(infra::IRepository &r);
 
-        // Member Management
-        void registerMember(const domain::Member& member);
-        domain::Member* getMember(int id);
+  // Book Management
+  void addBook(const domain::Book &book);
+  std::vector<domain::Book> searchBooks(const std::string &query) const;
+  std::vector<domain::Book> getAllBooks() const;
 
-        // Loan Logic
-        bool borrowBook(int bookId, int memberId);
-        bool returnBook(int bookId);
-    };
+  // Member Management
+  void registerMember(const domain::Member &member);
+  domain::Member *getMember(int id);
 
-}
+  // Loan Logic
+  bool borrowBook(int bookId, int memberId);
+  bool returnBook(int bookId);
+};
+
+} // namespace app

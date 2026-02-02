@@ -1,4 +1,5 @@
 #include "app/LibraryService.hpp"
+#include "infra/FileRepository.hpp"
 #include <iostream>
 #include <limits>
 #include <string>
@@ -10,12 +11,11 @@ void clearInput() {
 }
 
 int main() {
-  app::LibraryService service;
+  // Setup dependency injection
+  infra::FileRepository repo("books.csv", "members.csv", "loans.csv");
+  app::LibraryService service(repo);
 
-  // Seed some dummy data for testing immediate UI feedback
-  service.addBook(domain::Book(1, "The Great Gatsby", "F. Scott Fitzgerald"));
-  service.addBook(domain::Book(2, "1984", "George Orwell"));
-  service.addBook(domain::Book(3, "C++ Primer", "Stanley Lippman"));
+  // NOTE: Data is now loaded from CSV files automatically on startup!
 
   while (true) {
     std::cout << "\n=== LibTrack-CPP Manager ===\n";
