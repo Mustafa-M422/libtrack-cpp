@@ -6,6 +6,25 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+# --- wxWidgets Setup (Commit 11) ---
+include(FetchContent)
+FetchContent_Declare(
+    wxWidgets
+    GIT_REPOSITORY https://github.com/wxWidgets/wxWidgets.git
+    GIT_TAG        v3.2.4
+)
+
+# Configure wxWidgets build options BEFORE MakeAvailable
+set(wxBUILD_SHARED OFF CACHE BOOL "" FORCE)
+set(wxBUILD_SAMPLES OFF CACHE BOOL "" FORCE)
+set(wxBUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(wxBUILD_DEMOS OFF CACHE BOOL "" FORCE)
+set(wxBUILD_PRECOMP OFF CACHE BOOL "" FORCE)
+set(wxUSE_STL ON CACHE BOOL "" FORCE) # Inteoperability with std items
+
+message(STATUS "Downloading and configuring wxWidgets (this may take a while)...")
+FetchContent_MakeAvailable(wxWidgets)
+
 # --- Core Library ---
 # Contains Domain, Application, and Infrastructure layers.
 # No UI code should be here.
