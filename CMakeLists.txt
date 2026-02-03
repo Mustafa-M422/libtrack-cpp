@@ -30,6 +30,7 @@ FetchContent_MakeAvailable(wxWidgets)
 # No UI code should be here.
 set(CORE_SOURCES
     src/app/LibraryService.cpp
+    src/app/AppController.cpp
     src/infra/FileRepository.cpp
 )
 
@@ -68,6 +69,7 @@ endif()
 set(GUI_SOURCES
     src/gui/GuiApp.cpp
     src/gui/MainFrame.cpp
+    src/gui/BookListPanel.cpp
 )
 
 # WIN32 flag tells CMake to build as a Windows GUI app (not console)

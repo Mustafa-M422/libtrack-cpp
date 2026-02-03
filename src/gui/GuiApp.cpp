@@ -4,7 +4,11 @@
 namespace gui {
 
 bool GuiApp::OnInit() {
-  MainFrame *frame = new MainFrame("LibTrack-CPP (wxWidgets)");
+  // Initialize Shared App Logic
+  appController = std::make_unique<app::AppController>();
+  appController->initialize();
+
+  MainFrame *frame = new MainFrame("LibTrack-CPP (wxWidgets)", *appController);
   frame->Show(true);
   return true;
 }
